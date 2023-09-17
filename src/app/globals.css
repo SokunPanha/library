@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.input-box{
+ @apply outline-none rounded-sm  p-2 focus:shadow-lg duration-100 ease-in 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.header_form{
+@apply flex w-full gap-4 items-center justify-center text-2xl
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.input_container{
+@apply w-full flex gap-3 flex-col
+}
+
+
+
+
+.overlay{
+@apply bg-black opacity-25 w-full h-screen fixed top-0 left-0 -z-10 
 }
