@@ -22,7 +22,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(front-end)/(auth-site)/signup/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(front-end)/(auth-site)/signup/page.tsx", "src/components/admin/BookCreator.tsx"],
   "exclude": ["node_modules"],
   
 }

@@ -68,10 +68,10 @@ model Book{
     id  String @id @default(auto()) @map("_id") @db.ObjectId
     title String
     description String?
-    qrcode String
-    image String
-    number Int
-    publishDate DateTime?
+    qrcode String?
+    image String?
+    number Int?
+    publishDate String?
     createdAt DateTime @default(now())
     authorId String @db.ObjectId
     author Author @relation (fields:[authorId], references:[id]) 
@@ -81,12 +81,12 @@ model Book{
 
 model Author {
   id String @id @default(auto()) @map("_id") @db.ObjectId
-  name String
+  name String @unique
   books Book[]
 }
 
 model Category{
   id String @id @default(auto()) @map("_id") @db.ObjectId
-  category_name String
+  category_name String @unique
   book Book[]
 }

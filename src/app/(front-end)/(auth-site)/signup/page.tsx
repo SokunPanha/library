@@ -1,5 +1,5 @@
 "use client";
-import Btn from "@/components/Button";
+import Btn from "@/components/reusable/Button";
 import Link from "next/link";
 import React, { Fragment, useEffect, useState } from "react";
 import { VscSignIn } from "react-icons/vsc";
@@ -9,7 +9,7 @@ import { signIn } from "next-auth/react";
 import { toast } from "react-hot-toast";
 import { date, z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Input from "@/components/Input";
+import Input from "@/components/reusable/Input";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -22,6 +22,7 @@ import {
   ShieldCheckIcon
 } from "@heroicons/react/24/outline";
 import { totalmem } from "os";
+import ToggleTheme from "@/components/toggleTheme";
 
 export default function page() {
   const [isLoad, setLoader] = useState(false);
@@ -100,11 +101,13 @@ export default function page() {
   const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
   return (
     <Fragment>
+      <ToggleTheme float={true}/>
+
       <Form
       
         onSubmit={handleSubmit(onSubmit)}
         onChange={handleChange}
-        className="animate-wiggle"
+        className="animate-dimScreen"
       >
         <div className="header_form">
           <span>SING UP</span>

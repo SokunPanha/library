@@ -53,7 +53,6 @@ callbacks:{
     token.id = user!.id
     return token;
   }
-  console.log("token=>", token)
    return {
     ...token , id: userDb?.id! ,role: userDb.role
    }
@@ -61,7 +60,6 @@ callbacks:{
   async session({token, session, user}){
     session.user.id = token.id
     session.user.role = token.role
-    console.log("session=>",session)
     return session;
   }
 }

@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/components/Button";
+import Button from "@/components/reusable/Button";
 import Link from "next/link";
 import React, { Fragment, useState } from "react";
 import { SlLogin } from "react-icons/sl";
@@ -9,9 +9,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import Input from "@/components/Input";
+import Input from "@/components/reusable/Input";
 import { useRouter } from "next/navigation";
 import Spinner from "@/components/Spin";
+import ToggleTheme from "@/components/toggleTheme";
 export default function page() {
   const [loader, setLoader] = useState(false);
   // const {data:session} = useSession()
@@ -53,6 +54,7 @@ export default function page() {
   return (
     <Fragment>
       {loader && <Spinner />}
+      <ToggleTheme float={true}/>
       <div className="h-screen w-full flex justify-center items-center animate-dimScreen" >
         <form
           onSubmit={handleSubmit(handleLogin)}
