@@ -23,7 +23,9 @@ export default function RootLayout({
       <body  className={`${inter.className} animate-dimScreen`}>
         <Provider>
          <ThemeProvider>
+          
       {children}
+
       </ThemeProvider>
         <ToastContext />
         </Provider>
