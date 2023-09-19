@@ -69,7 +69,9 @@ export default function Page() {
       toast.error(message, { id: "error" });
     }
   };
-
+  useEffect(()=>{
+    setLoader(false)
+  },[])
   useEffect(()=>{
     if(userInfo.confirmPassword == userInfo.password &&(userInfo.confirmPassword.length>=6 && userInfo.password.length>=6)){
       SetIsMatchPassword(true)

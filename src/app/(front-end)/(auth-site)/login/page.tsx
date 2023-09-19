@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/reusable/Button";
 import Link from "next/link";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { SlLogin } from "react-icons/sl";
 import { FcGoogle } from "react-icons/fc";
 import { signIn } from "next-auth/react";
@@ -27,6 +27,10 @@ export default function Page() {
     handleSubmit,
     formState: { errors },
   } = useForm<LoginType>({ resolver: zodResolver(schema) });
+  
+  useEffect(()=>{
+    setLoader(false)
+  },[])
   const handleLogin = async (data: any) => {
     
     console.log(data);
