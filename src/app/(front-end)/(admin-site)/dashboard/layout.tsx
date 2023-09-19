@@ -1,5 +1,4 @@
-"use client"
-import Drawer from "@/components/admin/Drawer";
+
 import NavigationBar from "@/components/admin/NavBar";
 import React, { Fragment, useState } from "react";
  
