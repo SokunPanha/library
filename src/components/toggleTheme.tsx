@@ -11,8 +11,7 @@ const [theme, setTheme] = useLocalStorage("theme", "dark")
 const handleToggle = ()=>{
           setTheme(theme == "light" ? "dark":"light")
 }
-    useEffect(()=>{
-          
+    useEffect(()=>{    
           document.querySelector("html")?.setAttribute("data-theme", theme!)
 },[theme,float])
 return (
