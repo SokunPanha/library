@@ -9,6 +9,10 @@ const nextConfig = {
                       {
                         protocol: 'https',
                         hostname: "www.simplilearn.com"
+                      },
+                      {
+                        protocol:"https",
+                        hostname:"m.media-amazon.com"
                       }
                     ],
                   },
