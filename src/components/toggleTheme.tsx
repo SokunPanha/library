@@ -1,9 +1,6 @@
 "use client"
-import { useTheme } from '@/context/ThemeContext';
 import React, { Fragment, useEffect, useState } from 'react'
 import { useLocalStorage } from "usehooks-ts";
-
-
 
 interface ThemeType{
   float: boolean 
@@ -14,10 +11,10 @@ const [theme, setTheme] = useLocalStorage("theme", "dark")
 const handleToggle = ()=>{
           setTheme(theme == "light" ? "dark":"light")
 }
-          useEffect(()=>{
-            console.log(float)
+    useEffect(()=>{
+          
           document.querySelector("html")?.setAttribute("data-theme", theme!)
-},[theme])
+},[theme,float])
 return (
   <Fragment>
 <label className={`swap swap-rotate  ${ float ? "fixed bottom-5 right-5 ": ""}`} >

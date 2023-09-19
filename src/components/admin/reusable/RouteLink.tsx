@@ -14,7 +14,7 @@ export default function RouteLink({children,label,routePath, onClick, className}
           const {Theme} = useTheme()
           useEffect(()=>{
                     setTheme(Theme)
-          })
+          },[Theme])
 
   return (
     <Fragment>
