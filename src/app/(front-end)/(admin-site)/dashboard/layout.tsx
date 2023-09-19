@@ -8,7 +8,6 @@ export default function DashboardRootLayout({children}:{children: React.ReactNod
 <Fragment >
      <main className="animate-dimScreen ">
      <NavigationBar/>
-
      {children}
      </main>
     </Fragment>
