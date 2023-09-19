@@ -110,7 +110,7 @@ export default function Page() {
         className="animate-dimScreen"
       >
         <div className="header_form">
-          <span>SING UP</span>
+          <span>SING UP </span>
           <span>
             {" "}
             <VscSignIn />
