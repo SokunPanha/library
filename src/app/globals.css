@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-box{
+ @apply outline-none rounded-sm  p-2 focus:shadow-lg duration-100 ease-in 
+}
+
+.header_form{
+@apply flex w-full gap-4 items-center justify-center text-2xl
+}
+
+.input_container{
+@apply w-full flex gap-3 flex-col
+}
+
+
+
+
+.overlay{
+@apply bg-black opacity-25 w-full h-screen fixed top-0 left-0 -z-10 
+}
+
+
+.create_book_inputBox{
+@apply w-full justify-between flex md:flex-row  flex-col gap-1        
+}
+
+.create_book_input{
+@apply md:w-[48%]  flex-col flex gap-2
+
+}
