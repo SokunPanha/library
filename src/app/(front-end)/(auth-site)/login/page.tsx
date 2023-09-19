@@ -13,7 +13,7 @@ import Input from "@/components/reusable/Input";
 import { useRouter } from "next/navigation";
 import Spinner from "@/components/Spin";
 import ToggleTheme from "@/components/toggleTheme";
-export default function page() {
+export default function Page() {
   const [loader, setLoader] = useState(false);
   // const {data:session} = useSession()
   const router = useRouter();
@@ -107,7 +107,7 @@ export default function page() {
             <p>
               {" "}
               Don't have an account?{" "}
-              <Link className="text-blue-600" href="/signup">
+              <Link onClick={()=>{setLoader(!loader)}} className="text-blue-600" href="/signup">
                 Register here.
               </Link>
             </p>

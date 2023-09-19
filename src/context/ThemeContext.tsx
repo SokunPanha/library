@@ -4,7 +4,7 @@ import  {useReadLocalStorage}  from 'usehooks-ts'
 interface ThemeContextType { Theme: string; }
 const ThemeContext = createContext<ThemeContextType>({Theme: " "})
 export const useTheme= ()=> useContext(ThemeContext);
-const  ThemeProvider  = React.memo(({children}:{children:React.ReactNode})=> {
+const  ThemeProvider  = ({children}:{children:React.ReactNode})=> {
   const Theme = useReadLocalStorage("theme") as string
   
 
@@ -13,6 +13,6 @@ const  ThemeProvider  = React.memo(({children}:{children:React.ReactNode})=> {
 {children}
    </ThemeContext.Provider>
   )
-})
+}
 
 export {ThemeProvider}

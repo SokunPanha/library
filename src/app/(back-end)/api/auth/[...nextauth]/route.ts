@@ -6,8 +6,7 @@ import prisma from "../../../../../../prisma/prisma";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import bcrypt from "bcrypt"
 
-
-export const authOptions : NextAuthOptions = {
+ const authOptions : NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   // Configure one or more authentication providers
   providers: [

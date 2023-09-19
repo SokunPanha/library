@@ -24,7 +24,7 @@ import {
 import { totalmem } from "os";
 import ToggleTheme from "@/components/toggleTheme";
 
-export default function page() {
+export default function Page() {
   const [isLoad, setLoader] = useState(false);
   const [effect, setEffect] = useState(false);
   const [isMatchPassword, SetIsMatchPassword] = useState(false)
@@ -55,7 +55,7 @@ export default function page() {
   } = useForm<SignUpType>({ resolver: zodResolver(schema) });
   const onSubmit = async (data: any) => {
     try {
-      toast.loading("Please wait a minute!", { id: "loading" });
+      toast.loading("Please wait a minutyye!", { id: "loading" });
       const response = await axios.post("/api/user/register", data);
       const { message } = response.data;
       if (response.status != 401) {
@@ -240,7 +240,7 @@ export default function page() {
           <p>
             {" "}
             Did you have an account?{" "}
-            <Link className="text-blue-600" href="/login">
+            <Link onClick={()=>{setLoader(!isLoad)}} className="text-blue-600" href="/login">
               Login here.
             </Link>
           </p>

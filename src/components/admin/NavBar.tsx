@@ -18,7 +18,7 @@ export default function NavigationBar() {
   const {Theme} = useTheme()
   useEffect(()=>{
    setTheme(Theme)
-  })
+  },[Theme])
   const {data:session} = useSession()
   return (
     <Fragment>

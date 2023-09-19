@@ -20,3 +20,13 @@
 .overlay{
 @apply bg-black opacity-25 w-full h-screen fixed top-0 left-0 -z-10 
 }
+
+
+.create_book_inputBox{
+@apply w-full justify-between flex md:flex-row  flex-col gap-1        
+}
+
+.create_book_input{
+@apply md:w-[48%]  flex-col flex gap-2
+
+}
